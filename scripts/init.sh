@@ -9,18 +9,22 @@ git submodule update --init
 
 # grabbing executor's dependencies
 pushd ./src/executor
+cp ../workspace/Cartridge.lock ./Cartridge.lock
 GOPATH=$PWD
 gocart
     pushd ./src/github.com/onsi-experimental/executor
+        cp ../../../../../workspace/Cartridge.lock ./Cartridge.lock
         gocart
     popd
 popd
 
 #grabbing garden's dependencies
 pushd ./src/garden
+cp ../workspace/Cartridge.lock ./Cartridge.lock
 GOPATH=$PWD
 gocart
     pushd ./src/github.com/onsi-experimental/garden
+        cp ../../../../../workspace/Cartridge.lock ./Cartridge.lock
         gocart
     popd
 popd
