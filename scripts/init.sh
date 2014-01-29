@@ -7,10 +7,18 @@ git submodule update --init
 
 # grabbing executor's dependencies
 pushd ./src/executor
-GOPATH=$PWD gocart
+GOPATH=$PWD
+gocart
+    pushd ./src/github.com/onsi-experimental/executor
+        gocart
+    popd
 popd
 
 #grabbing garden's dependencies
 pushd ./src/garden
-GOPATH=$PWD gocart
+GOPATH=$PWD
+gocart
+    pushd ./src/github.com/onsi-experimental/garden
+        gocart
+    popd
 popd
