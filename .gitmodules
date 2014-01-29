@@ -1,0 +1,3 @@
+[submodule "src/workspace"]
+	path = src/workspace
+	url = https://github.com/onsi-experimental/workspace
